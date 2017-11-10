@@ -2,12 +2,10 @@
 <testng-results skipped="0" failed="0" ignored="0" total="0" passed="0">
   <reporter-output>
   </reporter-output>
-  <suite name="QaPro" duration-ms="0" started-at="2017-11-10T23:24:38Z" finished-at="2017-11-10T23:24:38Z">
+  <suite name="Default suite" duration-ms="0" started-at="2017-11-10T23:44:53Z" finished-at="2017-11-10T23:44:53Z">
     <groups>
     </groups>
-    <test name="==================aceBook SignUp testing using FirefoxTest===============" duration-ms="0" started-at="2017-11-10T23:24:38Z" finished-at="2017-11-10T23:24:38Z">
-    </test> <!-- ==================aceBook SignUp testing using FirefoxTest=============== -->
-    <test name=" =============FaceBook SignUp testing using ChtomeTest==================" duration-ms="0" started-at="2017-11-10T23:24:38Z" finished-at="2017-11-10T23:24:38Z">
-    </test> <!--  =============FaceBook SignUp testing using ChtomeTest================== -->
-  </suite> <!-- QaPro -->
+    <test name="Default test" duration-ms="0" started-at="2017-11-10T23:44:53Z" finished-at="2017-11-10T23:44:53Z">
+    </test> <!-- Default test -->
+  </suite> <!-- Default suite -->
 </testng-results>
