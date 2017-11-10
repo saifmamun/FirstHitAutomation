@@ -1,5 +1,6 @@
 package utils;
 
+import org.apache.log4j.Logger;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
@@ -8,11 +9,20 @@ import org.openqa.selenium.support.ui.Select;
 public class WebDriverFunctions {
 
 	public static WebDriver driver;
+	public static Logger APPLICATION_LOGS = Logger.getLogger ("devpinoyLogger");
 	
 	public void typeByXpath (String locators, String values){
+		try{
 		driver.findElement(By.xpath(locators)).clear();
 		driver.findElement (By.xpath(locators)).sendKeys (values);
 		}
+		catch(Exception e){
+			APPLICATION_LOGS.debug("issue with:"+ e.getMessage());
+			
+			
+		}
+
+	}
 
 	public void typeByName (String locators, String values){
 		driver.findElement(By.name(locators)).clear();
@@ -64,10 +74,10 @@ public class WebDriverFunctions {
 
 	public void radioButtonByXpath(String locatorF, String locatorM){
 		boolean isSelectedGender = driver.findElement(By.xpath(locatorF)).isSelected();
-		//if(isSelectedGender)
+		if(isSelectedGender)
 			driver.findElement(By.xpath(locatorM)).click();
 		
-		//else
+		else
 			driver.findElement(By.xpath(locatorF)).click();
 		
 	}
@@ -78,7 +88,6 @@ public class WebDriverFunctions {
 		driver.manage().window().maximize();
 		
 	}
-}
 
 
 	// Add all the necessary functions for automation your suite. like...
@@ -99,4 +108,4 @@ public class WebDriverFunctions {
 	//...as many as possible
 	
 
-
+}
